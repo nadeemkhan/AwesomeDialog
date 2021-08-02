@@ -96,5 +96,25 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/yesButton" />
+        <TextView
+            android:id="@+id/extraButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/triple_margin"
+            android:layout_marginStart="@dimen/double_margin"
+            android:layout_marginTop="@dimen/half_margin"
+            android:layout_marginEnd="@dimen/double_margin"
+            android:layout_marginBottom="@dimen/single_margin"
+            android:background="@drawable/layout_rounded_dark_black"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingStart="@dimen/single_margin"
+            android:paddingEnd="@dimen/single_margin"
+            android:text="@string/done"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/noButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
