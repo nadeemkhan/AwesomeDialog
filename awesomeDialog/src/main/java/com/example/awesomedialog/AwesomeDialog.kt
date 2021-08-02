@@ -180,6 +180,27 @@ fun AlertDialog.onNegative(
     return this
 }
 
+fun AlertDialog.onExtra(
+    text: String,
+    buttonBackgroundColor: Int? = null,
+    textColor: Int? = null,
+    action: (() -> Unit)? = null
+): AlertDialog {
+    this.extraButton.show()
+    this.extraButton.text = text.trim()
+    if (textColor != null) {
+        this.extraButton.setTextColor(textColor)
+    }
+    if (buttonBackgroundColor != null) {
+        this.extraButton.setBackgroundResource(buttonBackgroundColor)
+    }
+    this.extraButton.setOnClickListener {
+        action?.invoke()
+        dismiss()
+    }
+    return this
+}
+
 private fun View.show() {
     this.visibility = View.VISIBLE
 }
